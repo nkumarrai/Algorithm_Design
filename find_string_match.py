@@ -16,7 +16,7 @@ def help_message():
   print("[method]   - 1 - perform a naive search")
   print("[string_p] - input string")
   print("[string_s] - sentence")
-  print("Example usages: " + sys.argv[0] + " 1 " + "string_p " + "string_s")
+  print("Example usages: " + sys.argv[0] + " 1 " + "\"naveen\"" + " \"my name is naveen\"")
    
 """
 ===================================================

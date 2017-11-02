@@ -11,12 +11,11 @@ import numpy as np
 import ast
 
 def help_message():
-  print("Usage: ")
+  print("Usage: [sorting algorithm] [input_array]")
   print("[sorting algorithm]")
   print("1 - Insertion sort")
   print("2 - Selection sort")
-  print("[input array]")
-  print("Pass an input array to sort")
+  print("[input array] - Pass an input array to sort")
   print("Example usages: " + sys.argv[0] + " 1 " + "\"[3,4,2,1]\"")
    
 def swap(input_array, i, j):

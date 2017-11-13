@@ -11,6 +11,8 @@ import numpy as np
 import ast
 
 # Only works for sorted arrays in ascending order
+
+# Iterative method
 def binary_search_iterative(input_array, value):
   left = 0
   right = len(input_array) - 1
@@ -25,6 +27,7 @@ def binary_search_iterative(input_array, value):
       left = mid + 1
   return -1
 
+# Recursive method
 def bs_recursive(input_array, left, right, value):
   if left > right:
     return -1

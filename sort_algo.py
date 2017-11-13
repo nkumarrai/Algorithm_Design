@@ -15,6 +15,7 @@ def help_message():
   print("[sorting algorithm]")
   print("1 - Insertion sort")
   print("2 - Selection sort")
+  print("3 - Bubble sort")
   print("[input array] - Pass an input array to sort")
   print("Example usages: " + sys.argv[0] + " 1 " + "\"[3,4,2,1]\"")
    
@@ -35,9 +36,9 @@ If the list is almost sorted, it takes O(n)
 def insertion_sort(input_array):
   for i in range(len(input_array)):
     j = i
-    while j > 0 and input_array[j] < input_array[j-1]:
+    while j > 0 and input_array[j-1] > input_array[j]:
       swap(input_array, j, j-1)
-    j = j -1
+      j = j -1
   return input_array
 
 """
@@ -60,6 +61,20 @@ def selection_sort(input_array):
 
   return input_array
 
+"""
+===================================================
+======== Sorting algorithm : Bubble sort =======
+===================================================
+Time complexity - O(n^2)
+"""
+def bubble_sort(input_array):
+  for i in range(len(input_array)):
+    for j in range(1, len(input_array)-i):
+      if input_array[j-1] > input_array[j]:
+        swap(input_array, j, j-1)
+  return input_array
+
+
 if __name__ == '__main__':
   which_sort = -1
    
@@ -74,6 +89,7 @@ if __name__ == '__main__':
   function_launch = {
   1 : insertion_sort,
   2 : selection_sort,
+  3 : bubble_sort,
   }
 
   # Call the function

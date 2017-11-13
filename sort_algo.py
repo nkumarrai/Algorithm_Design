@@ -1,7 +1,7 @@
 """
 Algorithm design
 Date - 11/01/2017
-Topic - Insertion sort
+Topic - Sorting algorithms
 """
 
 import os
